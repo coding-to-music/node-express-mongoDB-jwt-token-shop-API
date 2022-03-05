@@ -17,6 +17,40 @@ https://javascript.plainenglish.io/making-api-endpoints-for-rest-api-in-nodejs-e
 
 Use the URI-: https://shop-restapi.herokuapp.com/ and the below mentioned routes to access the API.
 
+## Set .env file
+
+Get AWS Access key and secret key from:
+
+https://awscli.amazonaws.com/v2/documentation/api/latest/reference/configure/get.html
+
+.env.example file:
+
+```java
+PORT = 3000 
+DB_CONNECTION="Get from MongoDB Atlas Dashboard"
+AWS_ACCESS_KEY_ID="exampleAKIA2FYET3LYEFGEF2AHJ"
+AWS_ACCESS_KEY_SECRET="exampleycOIx4DIVmeoU+8bajusH4/Gnan0Xv2YZrB5K8gO"
+AWS_BUCKET_NAME="your bucket name"
+```
+
+```java
+aws configure get aws_access_key_id
+
+aws configure get aws_secret_access_key
+```
+
+## Run locallly
+
+```java
+npm install
+
+npm run start
+```
+
+http://localhost:3000/
+
+{"message":"It works"}
+
 
 ## 1. /user
    * /getMyAllUserJustForME  Request Type [GET],(JWT-Token in header provided during login) -: will give all the users in json format.
