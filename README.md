@@ -1,6 +1,12 @@
 # Shop-RestApi
 ## Shop-API for handling the orders, products, and user data.
 
+Article:
+
+https://aws.plainenglish.io/how-to-upload-photos-to-amazon-s3-bucket-using-node-js-b567188a662a
+
+
+
 Use the URI-: https://shop-restapi.herokuapp.com/ and the below mentioned routes to access the API.
 
 
