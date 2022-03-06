@@ -11,7 +11,12 @@ https://aws.plainenglish.io/how-to-upload-photos-to-amazon-s3-bucket-using-node-
 
 Depends on this REST API:
 
+Part 1:
+
 https://javascript.plainenglish.io/how-to-make-rest-api-with-node-js-express-and-mongodb-dfce5e70e830
+
+
+Part 2:
 
 https://javascript.plainenglish.io/making-api-endpoints-for-rest-api-in-nodejs-ec688c18aaa
 
@@ -51,6 +56,16 @@ http://localhost:3000/
 
 {"message":"It works"}
 
+Test via Postman:
+
+```java
+http://localhost:3000/login
+
+http://localhost:3000/signup
+
+http://localhost:3000/getMyAllUserJustForME
+
+```
 
 ## 1. /user
    * /getMyAllUserJustForME  Request Type [GET],(JWT-Token in header provided during login) -: will give all the users in json format.

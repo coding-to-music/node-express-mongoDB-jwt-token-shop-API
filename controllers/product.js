@@ -2,7 +2,7 @@ const Product = require('../models/Product')
 
 exports.get_all_product = async (req, res) => {
     try {
-        console.log("hello")
+        console.log("get_all_product")
         const products = await Product.find()
         
         console.log(products)

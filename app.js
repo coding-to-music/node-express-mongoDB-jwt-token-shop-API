@@ -31,6 +31,8 @@ app.use((req, res, next) => {
     res.status(200).json({
         message: "It works"
     });
+    console.log("It works")
+    console.log(req.headers)
 })
 
 
