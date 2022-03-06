@@ -1,7 +1,8 @@
 const jwt = require('jsonwebtoken')
 require('dotenv')
 module.exports = (req, res, next) => {
-    console.log(req.headers)
+    console.log("About to Check Auth")
+    // console.log(req.headers.authorization)
     try {
         const token = req.headers.authorization;
         console.log(req.headers.authorization)
@@ -10,6 +11,7 @@ module.exports = (req, res, next) => {
         console.log(req.userData)
         next();
     } catch (err) {
+        console.log("Auth failed")
         return res.status(401).json({
             message: "Auth failed"
         })

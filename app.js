@@ -29,10 +29,11 @@ mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedT
 
 app.use((req, res, next) => {
     res.status(200).json({
-        message: "It works"
+        // message: "It works"
+        message: req.headers
     });
     console.log("It works")
-    console.log(req.headers)
+    // console.log(req.headers)
 })
 
 

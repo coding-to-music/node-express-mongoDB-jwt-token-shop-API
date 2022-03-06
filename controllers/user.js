@@ -12,6 +12,8 @@ exports.get_all_user = async (req, res) => {
     }
 }
 exports.user_signup = (req, res) => {
+    console.log("user_signup");
+
     User.find({ email: req.body.email })
         .exec()
         .then((user) => {
