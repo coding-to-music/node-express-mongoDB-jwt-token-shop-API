@@ -40,6 +40,7 @@ DB_CONNECTION="Get from MongoDB Atlas Dashboard"
 AWS_ACCESS_KEY_ID="exampleAKIA2FYET3LYEFGEF2AHJ"
 AWS_ACCESS_KEY_SECRET="exampleycOIx4DIVmeoU+8bajusH4/Gnan0Xv2YZrB5K8gO"
 AWS_BUCKET_NAME="your bucket name"
+NODE_ENV="development"
 ```
 
 ```java

@@ -40,11 +40,14 @@ mongoose
   });
 
 app.use((req, res, next) => {
+  console.log("Path = " + req.path);
+
   res.status(200).json({
     // message: "It works"
     message: req.headers,
   });
-  console.log("It works");
+  //   console.log("Success: Path = " + req.path);
+  //   console.log("It works");
   // console.log(req.headers)
 });
 
