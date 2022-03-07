@@ -1,0 +1,66 @@
+router                                                                                                         
+ ├── query                                         *                                                           
+ ├── expressInit                                   *                                                           
+ ├── jsonParser                                    *                                                           
+ ├── urlencodedParser                              *                                                           
+ ├── serveStatic                                   /^\/uploads\/?(?=\/|$)/                                     
+ ├── router                                        /^\/products\/?(?=\/|$)/                                    
+ │   router                                                                                                    
+ │    ├── bound dispatch                           /                                                           GET
+ │    │    └── <anonymous>                         /                                                           GET
+ │    │   
+ │    ├── bound dispatch                           /                                                           POST
+ │    │    ├── <anonymous>                         /                                                           POST
+ │    │    ├── multerMiddleware                    /                                                           POST
+ │    │    └── <anonymous>                         /                                                           POST
+ │    │   
+ │    ├── bound dispatch                           /:productId                                                 GET
+ │    │    └── <anonymous>                         /                                                           GET
+ │    │   
+ │    ├── bound dispatch                           /:productId                                                 PATCH
+ │    │    ├── <anonymous>                         /                                                           PATCH
+ │    │    └── <anonymous>                         /                                                           PATCH
+ │    │   
+ │    └── bound dispatch                           /:productId                                                 DELETE
+ │         ├── <anonymous>                         /                                                           DELETE
+ │         └── <anonymous>                         /                                                           DELETE
+ │        
+ │   
+ ├── router                                        /^\/orders\/?(?=\/|$)/                                      
+ │   router                                                                                                    
+ │    ├── bound dispatch                           /                                                           GET
+ │    │    └── <anonymous>                         /                                                           GET
+ │    │   
+ │    ├── bound dispatch                           /                                                           POST
+ │    │    ├── <anonymous>                         /                                                           POST
+ │    │    └── <anonymous>                         /                                                           POST
+ │    │   
+ │    ├── bound dispatch                           /:orderId                                                   GET
+ │    │    └── <anonymous>                         /                                                           GET
+ │    │   
+ │    ├── bound dispatch                           /:orderId                                                   PATCH
+ │    │    ├── <anonymous>                         /                                                           PATCH
+ │    │    └── <anonymous>                         /                                                           PATCH
+ │    │   
+ │    └── bound dispatch                           /:orderId                                                   DELETE
+ │         ├── <anonymous>                         /                                                           DELETE
+ │         └── <anonymous>                         /                                                           DELETE
+ │        
+ │   
+ └── router                                        /^\/user\/?(?=\/|$)/                                        
+     router                                                                                                    
+      ├── bound dispatch                           /get                                                        GET
+      │    ├── <anonymous>                         /                                                           GET
+      │    └── <anonymous>                         /                                                           GET
+      │   
+      ├── bound dispatch                           /signup                                                     POST
+      │    └── <anonymous>                         /                                                           POST
+      │   
+      ├── bound dispatch                           /login                                                      POST
+      │    └── <anonymous>                         /                                                           POST
+      │   
+      └── bound dispatch                           /:userId                                                    DELETE
+           ├── <anonymous>                         /                                                           DELETE
+           └── <anonymous>                         /                                                           DELETE
+          
+     
